@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  display: flex;
+
+  .cat-fact-list {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;  
+  }
+}
+
+
+
