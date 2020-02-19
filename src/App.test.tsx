@@ -7,5 +7,9 @@ describe('App', () => {
     const { getByTestId } = render(<App />);
     const catFactsList = getByTestId('cat-facts-list') as HTMLElement;
     expect(catFactsList).toBeInTheDocument();
+  });
+
+  it('will sort cat data and display sorted list', () => {
+
   })
 });

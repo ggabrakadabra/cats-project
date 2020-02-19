@@ -1,6 +1,7 @@
 import React from 'react';
 import './CatDetails.scss';
-import classnames from 'classnames';
+import ReactModal from 'react-modal';
+
 
 export interface CatDetailsProps {
   fact: string;
@@ -13,12 +14,13 @@ export default function CatDetails(props: CatDetailsProps) {
     fact
   } = props;
 
-  const [expanded, setExpanded] = React.useState(false);
+  const [showCatDetailsModal, setShowCatDetailsModal] = React.useState(false);
 
-  return (
-    <div 
+  const catDetailsContainer = () => {
+    return (
+      <div 
       className='cat-details-container'
-      onClick={() => setExpanded(!expanded)}
+      onClick={() => setShowCatDetailsModal(!showCatDetailsModal)}
     >
       <div className='cat-image' data-testid='cat-image'>
         <img 
@@ -30,5 +32,25 @@ export default function CatDetails(props: CatDetailsProps) {
         <div>{fact}</div>
       </div>
     </div>
-  )
+    )
+  }
+
+  const catDetailsModal = () => {
+    const defaultReactModalProps = {
+      isOpen: true,
+      shouldCloseOnOverlayClick: true,
+      shouldCloseOnEsc: true,
+      onRequestClose: () => setShowCatDetailsModal(!showCatDetailsModal),
+      className: 'modal',
+      overlayClassName: 'modal-overlay',
+      ariaHideApp: false
+    }
+    return (
+      <ReactModal {...defaultReactModalProps}>
+        {catDetailsContainer()}
+      </ReactModal>
+    );
+  }
+
+  return showCatDetailsModal ? catDetailsModal() : catDetailsContainer()
 }
