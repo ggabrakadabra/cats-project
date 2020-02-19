@@ -1,5 +1,6 @@
 import React from 'react';
 import './CatDetails.scss';
+import classnames from 'classnames';
 
 export interface CatDetailsProps {
   fact: string;
@@ -12,8 +13,17 @@ export default function CatDetails(props: CatDetailsProps) {
     fact
   } = props;
 
+  const [expanded, setExpanded] = React.useState(false);
+
+  const catDetailsContainerClasses = classnames('cat-details-container', {
+    'expanded': expanded
+  });
+
   return (
-    <div className='cat-details-container'>
+    <div 
+      className={catDetailsContainerClasses}
+      onClick={() => setExpanded(!expanded)}
+    >
       <div className='cat-image' data-testid='cat-image'>
         <img 
           src={pictureUrl}
@@ -21,7 +31,7 @@ export default function CatDetails(props: CatDetailsProps) {
         />
       </div>
       <div className='cat-fact' data-testid='cat-fact'>
-        <p>{fact}</p>
+        <div>{fact}</div>
       </div>
     </div>
   )

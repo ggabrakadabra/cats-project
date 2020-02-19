@@ -1,11 +1,12 @@
 .App {
-  text-align: center;
+  // text-align: center;
   display: flex;
 
   .cat-fact-list {
     flex-wrap: wrap;
     display: flex;
-    justify-content: space-evenly;  
+    // justify-content: space-evenly;  
+    width: 100%;
   }
 }
 
