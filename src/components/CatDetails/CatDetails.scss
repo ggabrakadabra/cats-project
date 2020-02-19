@@ -1,5 +1,4 @@
 .cat-details-container {
-  height: 300px;
   width: 300px;
 
   align-items: center;
@@ -8,17 +7,8 @@
   flex-direction: column;
 
   img {
-    height: 200px;
-    width: 200px;
-  }
-
-  &.expanded {
+    max-width: 100%;
     height: auto;
-    width: auto;
-    
-    img {
-      height: auto;
-      width: auto;
-    }
+    padding: 2px;
   }
 }

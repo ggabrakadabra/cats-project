@@ -15,13 +15,9 @@ export default function CatDetails(props: CatDetailsProps) {
 
   const [expanded, setExpanded] = React.useState(false);
 
-  const catDetailsContainerClasses = classnames('cat-details-container', {
-    'expanded': expanded
-  });
-
   return (
     <div 
-      className={catDetailsContainerClasses}
+      className='cat-details-container'
       onClick={() => setExpanded(!expanded)}
     >
       <div className='cat-image' data-testid='cat-image'>

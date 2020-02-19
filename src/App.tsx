@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import { getCatFacts, getCatImages } from './api/fetch';
+import { getCatFacts, getCatImages } from './api/catApi';
 import { zipWith } from 'lodash';
 import CatDetails from './components/CatDetails/CatDetails';
 
