@@ -1,6 +1,7 @@
 .App {
   display: flex;
-
+  flex-direction: column;
+  
   .cat-fact-list {
     flex-wrap: wrap;
     display: flex;

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import { getCatFacts, getCatImages } from './api/catApi';
-import { zipWith } from 'lodash';
+import { zipWith, sortBy, isNil } from 'lodash';
 import CatDetails from './components/CatDetails/CatDetails';
 
 export interface PictureData {
@@ -18,6 +18,7 @@ export interface CatFacts {
 export interface CatData {
   page: number;
   catFacts: CatFacts[];
+  sortedCatFacts?: CatFacts[];
 }
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
     page: 0,
     catFacts: []
   });
+
+  const [showSortByLastWord, setShowSortByLastWord ] = React.useState(false);
 
   const getCatData = React.useCallback(async () => {
     const facts = await getCatFacts();
@@ -40,11 +43,34 @@ function App() {
   React.useEffect(() => {
     getCatData();
   }, [getCatData]);
+  
+  const sortCatData = () => {
+    const sortedCatFacts = sortBy(catData.catFacts, [(cat) => {
+      const catFactArrayOfWords = cat.fact.toLocaleLowerCase().split(' ');
+      const catFactLastWord = catFactArrayOfWords[catFactArrayOfWords.length - 1];
+      return catFactLastWord.replace(/[^\w\s]/gi, '');
+    }]);
 
+    setCatData({
+      ...catData,
+      sortedCatFacts
+    });
+    setShowSortByLastWord(!showSortByLastWord);
+  }
+
+
+  const { catFacts, sortedCatFacts } = catData
+  const maybeSortedCatFacts = (showSortByLastWord && !isNil(sortedCatFacts)) ? sortedCatFacts : catFacts;
+  
   return (
     <div className='App'>
+      <button
+        onClick={() => sortCatData()}
+      >
+        sort by last word
+      </button>
       <div className='cat-fact-list' data-testid='cat-facts-list'>
-        {catData.catFacts.map((data: CatFacts) => {
+        {maybeSortedCatFacts.map((data: CatFacts) => {
           return (
             <CatDetails 
               key={data.picture.id}
