@@ -28,6 +28,7 @@ function App() {
   });
 
   const [showSortByLastWord, setShowSortByLastWord ] = React.useState(false);
+  // const [expandCatDetails, setExpandCatDetails] = React.useState(false);
 
   const getCatData = React.useCallback(async () => {
     const facts = await getCatFacts();
@@ -64,21 +65,26 @@ function App() {
   
   return (
     <div className='App'>
-      <button
-        onClick={() => sortCatData()}
-      >
-        sort by last word
-      </button>
+      <div className='header-container'>
+        <button
+          className='sort-button'
+          onClick={() => sortCatData()}
+        >
+          sort by last word
+        </button>
+      </div>
       <div className='cat-fact-list' data-testid='cat-facts-list'>
-        {maybeSortedCatFacts.map((data: CatFacts) => {
-          return (
-            <CatDetails 
-              key={data.picture.id}
-              fact={data.fact}
-              pictureUrl={data.picture.url}
-          />
-          )
-        })}
+          {maybeSortedCatFacts.map((data: CatFacts) => {
+            return (
+              <CatDetails 
+                key={data.picture.id}
+                fact={data.fact}
+                pictureUrl={data.picture.url}
+                // expandCatDetails={expandCatDetails}
+                // setExpandCatDetails={setExpandCatDetails}
+            />
+            )
+          })}
       </div>
     </div>
   );

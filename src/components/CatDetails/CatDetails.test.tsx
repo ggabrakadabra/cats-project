@@ -20,7 +20,9 @@ describe('CatDetails component', () => {
   it('will display given cat image and fact', () => {
     const props: CatDetailsProps = {
       fact: 'cats are lovely', 
-      pictureUrl: 'www.foo.com'
+      pictureUrl: 'www.foo.com',
+      showCatDetailsCarousel: false,
+      setShowCatDetailsCarousel: jest.fn()
     };
     const { catImage, catFact} = setup(props);
     expect(catImage.innerHTML).toContain('www.foo.com');
