@@ -1,10 +1,12 @@
 import React from 'react';
 import './CatDetails.scss';
 import ReactModal from 'react-modal';
+import { setFavorite } from '../../api/userApi';
 
 export interface CatDetailsProps {
   fact: string;
   pictureUrl: string;
+  id: string;
 }
 
 export default function CatDetails(props: CatDetailsProps) {
@@ -23,6 +25,10 @@ export default function CatDetails(props: CatDetailsProps) {
     className: 'modal',
     overlayClassName: 'modal-overlay',
     ariaHideApp: false
+  }
+
+  const saveToFavorites = () => {
+    setFavorite(props)
   }
 
   const catDetails = () => {

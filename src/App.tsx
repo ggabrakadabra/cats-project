@@ -3,6 +3,10 @@ import './App.scss';
 import { getCatFacts, getCatImages } from './api/catApi';
 import { zipWith, sortBy, isNil } from 'lodash';
 import CatDetails from './components/CatDetails/CatDetails';
+import uuid from 'uuid';
+import { setUser } from './api/userApi';
+
+export const userId = uuid();
 
 export interface PictureData {
   id: string;
@@ -28,7 +32,6 @@ function App() {
   });
 
   const [showSortByLastWord, setShowSortByLastWord ] = React.useState(false);
-  // const [expandCatDetails, setExpandCatDetails] = React.useState(false);
 
   const getCatData = React.useCallback(async () => {
     const facts = await getCatFacts();
@@ -39,6 +42,8 @@ function App() {
       page: 1,
       catFacts: catFactsArray
     })
+
+    setUser(userId);
   }, []);
   
   React.useEffect(() => {
@@ -80,8 +85,7 @@ function App() {
                 key={data.picture.id}
                 fact={data.fact}
                 pictureUrl={data.picture.url}
-                // expandCatDetails={expandCatDetails}
-                // setExpandCatDetails={setExpandCatDetails}
+                id={data.picture.id}
             />
             )
           })}

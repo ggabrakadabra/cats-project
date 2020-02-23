@@ -1,1 +1,57 @@
-{}
+{
+  "users": [
+    {
+      "id": "5e9e6863-cf68-4ba2-b033-8daff98bfdfe",
+      "favorites": []
+    },
+    {
+      "id": "f5176768-f1d5-4c7f-9a93-ae1d952c7296",
+      "favorites": []
+    },
+    {
+      "id": "09ee8ac3-60d4-4228-bc5d-4d816d1f86fa",
+      "favorites": []
+    },
+    {
+      "id": "63582767-a82a-4ffa-8d52-31252cb66aaf",
+      "favorites": []
+    },
+    {
+      "id": "44366de3-0fbb-4613-bb95-499bb9b877b6",
+      "favorites": []
+    },
+    {
+      "id": "716302a6-2651-47f0-bf58-7581fb59747d",
+      "favorites": []
+    },
+    {
+      "id": "6716d189-cbdd-47b4-85dd-81000c39b462"
+    },
+    {
+      "id": "6c278a05-e468-4629-9a41-3da6a20cb2a1"
+    },
+    {
+      "id": "c1292dff-b3b4-4e6a-adc3-ad9656769c27"
+    },
+    {
+      "id": "423571a6-1d26-4784-9cf4-dcdf7b75d596"
+    },
+    {
+      "id": "d0ce5a90-ed0d-4daa-981a-8e19e38ba675"
+    },
+    {
+      "id": "5cbc70df-c8c9-423b-ba35-50c08ec98296"
+    },
+    {
+      "id": "e8fa92ea-25aa-43fa-97f4-d8431ac584b0"
+    },
+    {
+      "id": "95b138ce-b5e6-413d-a920-dbda010b6897",
+      "favorites": {
+        "fact": "Neutering a cat extends its life span by two or three years.",
+        "pictureUrl": "https://25.media.tumblr.com/gZxdcfE6hihxsavl6FobKZ5wo1_500.jpg",
+        "id": "4f7"
+      }
+    }
+  ]
+}
