@@ -1,18 +1,26 @@
 import React from 'react';
 import './CatDetails.scss';
 import ReactModal from 'react-modal';
-import { setFavorite } from '../../api/userApi';
 
-export interface CatDetailsProps {
+export interface CatDetailProps {
   fact: string;
   pictureUrl: string;
   id: string;
 }
 
-export default function CatDetails(props: CatDetailsProps) {
+export interface CatDetailsComponentProps {
+  fact: string;
+  pictureUrl: string;
+  id: string;
+  saveToFavorites: (hasFavorites: boolean, favorite: CatDetailProps) => void;
+}
+
+export default function CatDetails(props: CatDetailsComponentProps) {
   const {
     pictureUrl,
     fact,
+    saveToFavorites,
+    id,
   } = props;
 
   const [showCatModal, setShowCatModal] = React.useState(false);
@@ -25,10 +33,6 @@ export default function CatDetails(props: CatDetailsProps) {
     className: 'modal',
     overlayClassName: 'modal-overlay',
     ariaHideApp: false
-  }
-
-  const saveToFavorites = () => {
-    setFavorite(props)
   }
 
   const catDetails = () => {
@@ -46,7 +50,11 @@ export default function CatDetails(props: CatDetailsProps) {
         <div className='cat-fact' data-testid='cat-fact'>
           <div>{fact}</div>
         </div>
-        {showCatModal ? <button onClick={() => saveToFavorites()}>save to favorites</button> : null}
+        {showCatModal ? 
+          <button onClick={() => saveToFavorites(true, {fact, pictureUrl, id})}>
+            save to favorites
+          </button> 
+          : null}
       </div>
     )
   }
