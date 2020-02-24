@@ -1,56 +1,35 @@
 {
   "users": [
     {
-      "id": "b101fa8a-8e4a-4d7f-81b0-18f676792c32"
+      "id": "bb197b9c-20e8-4d4f-920a-22e5b567cd60"
     },
     {
-      "id": "e4e337eb-a86a-49d1-942c-e03e6ebe5137"
-    },
-    {
-      "id": "30d2f5e8-69e8-4a4f-855b-18799a09e4d3"
-    },
-    {
-      "id": "08237348-8105-448e-9269-05e514998980"
-    },
-    {
-      "id": "cc36ef0e-ae22-4822-956a-04fb6b03c8c4"
+      "id": "b1c617e4-a480-4153-80c7-2495054b2297"
     }
   ],
   "favorites": [
     {
-      "fact": "During the time of the Spanish Inquisition, Pope Innocent VIII condemned cats as evil and thousands of cats were burned. Unfortunately, the widespread killing of cats led to an explosion of the rat population, which exacerbated the effects of the Black Death.",
-      "pictureUrl": "https://25.media.tumblr.com/tumblr_m3vg3rlZpo1qzex9io1_500.jpg",
-      "id": "3tg",
-      "userId": "b101fa8a-8e4a-4d7f-81b0-18f676792c32"
-    },
-    {
-      "fact": "According to a Gallup poll, most American pet owners obtain their cats by adopting strays.",
-      "pictureUrl": "https://s3.us-west-2.amazonaws.com/cdn2.thecatapi.com/images/4bt.gif",
-      "id": "4bt",
-      "userId": "b101fa8a-8e4a-4d7f-81b0-18f676792c32"
-    },
-    {
-      "fact": "Isaac Newton invented the cat flap. Newton was experimenting in a pitch-black room. Spithead, one of his cats, kept opening the door and wrecking his experiment. The cat flap kept both Newton and Spithead happy.",
-      "pictureUrl": "https://25.media.tumblr.com/tumblr_m3ji8fNbCC1qlen89o1_500.jpg",
-      "id": "8it",
+      "fact": "After humans, mountain lions have the largest range of any mammal in the Western Hemisphere.",
+      "pictureUrl": "https://24.media.tumblr.com/tumblr_m4667kGMmy1qejbiro1_500.jpg",
+      "id": "drf",
       "userId": "cc36ef0e-ae22-4822-956a-04fb6b03c8c4"
     },
     {
-      "fact": "In 1888, more than 300,000 mummified cats were found an Egyptian cemetery. They were stripped of their wrappings and carted off to be used by farmers in England and the U.S. for fertilizer.",
-      "pictureUrl": "https://25.media.tumblr.com/tumblr_lyxvzxDSYu1r6b7kmo1_500.jpg",
-      "id": "7cn",
+      "fact": "Unlike other cats, lions have a tuft of hair at the end of their tails.",
+      "pictureUrl": "https://25.media.tumblr.com/tumblr_m6d0l6duuT1qzrn1bo1_500.jpg",
+      "id": "MTU4NjcyMg",
       "userId": "cc36ef0e-ae22-4822-956a-04fb6b03c8c4"
     },
     {
-      "fact": "A kitten will typically weigh about 3 ounces at birth.  The typical male housecat will weigh between  7 and 9 pounds, slightly less for female housecats.",
-      "pictureUrl": "https://25.media.tumblr.com/tumblr_m3jg8n0YbJ1qze0hyo1_500.jpg",
-      "id": "a4m",
+      "fact": "Cats are the world's most popular pets, outnumbering dogs by as many as three to one",
+      "pictureUrl": "https://s3.us-west-2.amazonaws.com/cdn2.thecatapi.com/images/h6KdgA6MC.jpg",
+      "id": "h6KdgA6MC",
       "userId": "cc36ef0e-ae22-4822-956a-04fb6b03c8c4"
     },
     {
-      "fact": "A female cat can be referred to as a molly or a queen, and a male cat is often labeled as a tom.",
-      "pictureUrl": "https://24.media.tumblr.com/tumblr_ltozvwEaGd1qdey5co1_500.jpg",
-      "id": "cdu",
+      "fact": "Mohammed loved cats and reportedly his favorite cat, Muezza, was a tabby. Legend says that tabby cats have an “M” for Mohammed on top of their heads because Mohammad would often rest his hand on the cat’s head.",
+      "pictureUrl": "https://s3.us-west-2.amazonaws.com/cdn2.thecatapi.com/images/1RutANpj-.jpg",
+      "id": "1RutANpj-",
       "userId": "cc36ef0e-ae22-4822-956a-04fb6b03c8c4"
     }
   ]

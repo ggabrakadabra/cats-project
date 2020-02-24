@@ -1,6 +1,7 @@
 # About this project
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 This Project uses the [json server package](https://github.com/typicode/json-server) as an api to make data lookup and storage easy
+This project also uses Typescript. 
 
 ## Objective
 Some of the following specs are more ambiguous in nature. Feel free to interpret those specs in the way that you deem is best.
@@ -15,18 +16,20 @@ Some of the following specs are more ambiguous in nature. Feel free to interpret
 ## json-server
 Need to have the json server package downloaded globally 
 `npm install -g json-server`
+There are 2 endpoints this projects uses, "users" and "favorites".
 
 ## Start Project
 first, run `yarn`
 `nf start` will run both `yarn start` and `json-server --watch db.json`
+project will go to `http://localhost:5000/`
 
 ## User Favorites
 Since the unique identifier for the user is set on page load, the previous user favorites will not be accessible.
 This is because without having some kind of authentication, there is no simple way to identify the user so that their data can persist.
 
-
-## What I would add?
-- Test Coverage! Test coverage is important and with React Testing Library, adding integration tests is much easier
+## What else I would like to add?
+- Test Coverage! Test coverage is important and with React Testing Library, adding integration tests is much easier.
+- The ability to view previous and next photos in the Modal view.
 - Pagination. Ideally, if the user keeps scrolling down the page, I would show a loading spinner while fetching a new page of cat data. Once the data is fetched, append the new data to the already visible list. 
 
 
