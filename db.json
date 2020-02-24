@@ -1,100 +1,57 @@
 {
   "users": [
     {
-      "id": "a399be65-1661-44cf-bf77-3d990ffeab25",
-      "favorites": []
+      "id": "b101fa8a-8e4a-4d7f-81b0-18f676792c32"
     },
     {
-      "id": "c24f049d-e496-433d-b6f9-19e06b0c6110"
+      "id": "e4e337eb-a86a-49d1-942c-e03e6ebe5137"
     },
     {
-      "id": "65bdafc0-5840-4c36-b43f-2af4d6bbb4c5"
+      "id": "30d2f5e8-69e8-4a4f-855b-18799a09e4d3"
     },
     {
-      "id": "839ad647-f0e3-4a30-b25b-999018a9e087"
+      "id": "08237348-8105-448e-9269-05e514998980"
     },
     {
-      "id": "1eb4b40c-de5b-417a-9f50-181e9f550f65"
-    },
-    {
-      "id": "6be466f6-4321-4216-b35a-e0ed8e341944"
-    },
-    {
-      "id": "be634f9a-5cf2-4aae-b935-f3b2bd1e2d51"
-    },
-    {
-      "id": "1acf3d19-00df-44e9-947b-790ae6336dc5"
-    },
-    {
-      "id": "418d9def-0dda-41c6-8447-d3ef4becb2df"
-    },
-    {
-      "id": "73a3211a-aa75-409f-9a52-99a2deaea256"
-    },
-    {
-      "id": "948c21c6-9e1b-45ac-8343-ac97d7ea9cfc"
+      "id": "cc36ef0e-ae22-4822-956a-04fb6b03c8c4"
     }
   ],
   "favorites": [
     {
-      "fact": "In Japan, cats are thought to have the power to turn into super spirits when they die. This may be because according to the Buddhist religion, the body of the cat is the temporary resting place of very spiritual people.i",
-      "pictureUrl": "https://s3.us-west-2.amazonaws.com/cdn2.thecatapi.com/images/4bg.gif",
-      "id": "4bg",
-      "userId": "a399be65-1661-44cf-bf77-3d990ffeab25"
+      "fact": "During the time of the Spanish Inquisition, Pope Innocent VIII condemned cats as evil and thousands of cats were burned. Unfortunately, the widespread killing of cats led to an explosion of the rat population, which exacerbated the effects of the Black Death.",
+      "pictureUrl": "https://25.media.tumblr.com/tumblr_m3vg3rlZpo1qzex9io1_500.jpg",
+      "id": "3tg",
+      "userId": "b101fa8a-8e4a-4d7f-81b0-18f676792c32"
+    },
+    {
+      "fact": "According to a Gallup poll, most American pet owners obtain their cats by adopting strays.",
+      "pictureUrl": "https://s3.us-west-2.amazonaws.com/cdn2.thecatapi.com/images/4bt.gif",
+      "id": "4bt",
+      "userId": "b101fa8a-8e4a-4d7f-81b0-18f676792c32"
+    },
+    {
+      "fact": "Isaac Newton invented the cat flap. Newton was experimenting in a pitch-black room. Spithead, one of his cats, kept opening the door and wrecking his experiment. The cat flap kept both Newton and Spithead happy.",
+      "pictureUrl": "https://25.media.tumblr.com/tumblr_m3ji8fNbCC1qlen89o1_500.jpg",
+      "id": "8it",
+      "userId": "cc36ef0e-ae22-4822-956a-04fb6b03c8c4"
+    },
+    {
+      "fact": "In 1888, more than 300,000 mummified cats were found an Egyptian cemetery. They were stripped of their wrappings and carted off to be used by farmers in England and the U.S. for fertilizer.",
+      "pictureUrl": "https://25.media.tumblr.com/tumblr_lyxvzxDSYu1r6b7kmo1_500.jpg",
+      "id": "7cn",
+      "userId": "cc36ef0e-ae22-4822-956a-04fb6b03c8c4"
+    },
+    {
+      "fact": "A kitten will typically weigh about 3 ounces at birth.  The typical male housecat will weigh between  7 and 9 pounds, slightly less for female housecats.",
+      "pictureUrl": "https://25.media.tumblr.com/tumblr_m3jg8n0YbJ1qze0hyo1_500.jpg",
+      "id": "a4m",
+      "userId": "cc36ef0e-ae22-4822-956a-04fb6b03c8c4"
     },
     {
       "fact": "A female cat can be referred to as a molly or a queen, and a male cat is often labeled as a tom.",
-      "pictureUrl": "https://s3.us-west-2.amazonaws.com/cdn2.thecatapi.com/images/4qc.gif",
-      "id": "4qc",
-      "userId": "c24f049d-e496-433d-b6f9-19e06b0c6110"
-    },
-    {
-      "fact": "Female cats tend to be right pawed, while male cats are more often left pawed. Interestingly, while 90% of humans are right handed, the remaining 10% of lefties also tend to be male.",
-      "pictureUrl": "https://25.media.tumblr.com/tumblr_m3qb7bL5Qf1qcxyrro1_500.jpg",
-      "id": "apg",
-      "userId": "c24f049d-e496-433d-b6f9-19e06b0c6110"
-    },
-    {
-      "fact": "The normal body temperature of a cat is between 100.5 ° and 102.5 °F. A cat is sick if its temperature goes below 100 ° or above 103 °F.",
-      "pictureUrl": "https://28.media.tumblr.com/tumblr_m1se99DwQU1qzckeoo1_500.png",
-      "id": "1ct",
-      "userId": "65bdafc0-5840-4c36-b43f-2af4d6bbb4c5"
-    },
-    {
-      "fact": "Cats spend nearly 1/3 of their waking hours cleaning themselves.",
-      "pictureUrl": "https://26.media.tumblr.com/tumblr_lsa8l3VS7z1qjahcpo1_500.jpg",
-      "id": "12a",
-      "userId": "be634f9a-5cf2-4aae-b935-f3b2bd1e2d51"
-    },
-    {
-      "fact": "People who are allergic to cats are actually allergic to cat saliva or to cat dander. If the resident cat is bathed regularly the allergic people tolerate it better.",
-      "pictureUrl": "https://s3.us-west-2.amazonaws.com/cdn2.thecatapi.com/images/7l.gif",
-      "id": "7l",
-      "userId": "be634f9a-5cf2-4aae-b935-f3b2bd1e2d51"
-    },
-    {
-      "fact": "A cat's normal pulse is 140-240 beats per minute, with an average of 195.",
-      "pictureUrl": "https://25.media.tumblr.com/tumblr_lyzl8dbxRw1r6b7kmo1_500.jpg",
-      "id": "7bi",
-      "userId": "be634f9a-5cf2-4aae-b935-f3b2bd1e2d51"
-    },
-    {
-      "fact": "A cat’s back is extremely flexible because it has up to 53 loosely fitting vertebrae. Humans only have 34.",
-      "pictureUrl": "https://25.media.tumblr.com/tumblr_lsx51do6jo1r4xjo2o1_500.jpg",
-      "id": "5h0",
-      "userId": "418d9def-0dda-41c6-8447-d3ef4becb2df"
-    },
-    {
-      "fact": "Cats prefer to remain non-confrontational. They will not fight to show dominance, but rather to stake their territory. Cats will actually go to extremes to avoid one another in order to prevent a possible confrontation.",
-      "pictureUrl": "https://25.media.tumblr.com/tumblr_m3gqhqUQn51ruf4juo1_500.jpg",
-      "id": "3ht",
-      "userId": "418d9def-0dda-41c6-8447-d3ef4becb2df"
-    },
-    {
-      "fact": "British cat owners spend roughly 550 million pounds yearly on cat food.",
-      "pictureUrl": "https://25.media.tumblr.com/tumblr_lotdkjnhZF1qdvbl3o1_500.jpg",
-      "id": "7f4",
-      "userId": "418d9def-0dda-41c6-8447-d3ef4becb2df"
+      "pictureUrl": "https://24.media.tumblr.com/tumblr_ltozvwEaGd1qdey5co1_500.jpg",
+      "id": "cdu",
+      "userId": "cc36ef0e-ae22-4822-956a-04fb6b03c8c4"
     }
   ]
 }
