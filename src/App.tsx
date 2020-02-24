@@ -83,39 +83,39 @@ function App() {
   const maybeSortedCatFacts = (showSortByLastWord && !isNil(sortedCatFacts)) ? sortedCatFacts : catFacts;
 
   const displayedCatFacts = () => {
-    if (showUserFavorites) {
-      return (
-        <>
-          {userFavoriteCatFacts.map((favorite: CatDetailProps) => {
-            return (
-              <CatDetails 
-                key={favorite.id}
-                fact={favorite.fact}
-                pictureUrl={favorite.pictureUrl}
-                id={favorite.id}
-                saveToFavorites={saveToFavorites}
-              />
-            )
-          })}
-        </>
-      )
-    } else {
-      return (
-        <>
-          {maybeSortedCatFacts.map((data: CatFacts) => {
-            return (
-              <CatDetails 
-                key={data.picture.id}
-                fact={data.fact}
-                pictureUrl={data.picture.url}
-                id={data.picture.id}
-                saveToFavorites={saveToFavorites}
-              />
-            )
-          })}
-        </>
-      )
-    }
+    return (
+      <>
+        {maybeSortedCatFacts.map((data: CatFacts) => {
+          return (
+            <CatDetails 
+              key={data.picture.id}
+              fact={data.fact}
+              pictureUrl={data.picture.url}
+              id={data.picture.id}
+              saveToFavorites={saveToFavorites}
+            />
+          )
+        })}
+      </>
+    )
+  }
+
+  const displayUserFavorites = () => {
+    return (
+      <>
+        {userFavoriteCatFacts.map((favorite: CatDetailProps) => {
+          return (
+            <CatDetails 
+              key={favorite.id}
+              fact={favorite.fact}
+              pictureUrl={favorite.pictureUrl}
+              id={favorite.id}
+              saveToFavorites={saveToFavorites}
+            />
+          )
+        })}
+      </>
+    )
   }
   
   return (
@@ -140,7 +140,7 @@ function App() {
         </button> : null}
       </div>
       <div className='cat-fact-list' data-testid='cat-facts-list'>
-          {displayedCatFacts()}
+        {showUserFavorites ? displayUserFavorites() : displayedCatFacts()}
       </div>
     </div>
   );
