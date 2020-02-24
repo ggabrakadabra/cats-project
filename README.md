@@ -17,6 +17,7 @@ Need to have the json server package downloaded globally
 `npm install -g json-server`
 
 ## Start Project
+first, run `yarn`
 `nf start` will run both `yarn start` and `json-server --watch db.json`
 
 ## User Favorites

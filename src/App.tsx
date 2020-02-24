@@ -4,7 +4,7 @@ import { getCatFacts, getCatImages } from './api/catApi';
 import { zipWith, sortBy, isNil } from 'lodash';
 import CatDetails, { CatDetailProps } from './components/CatDetails/CatDetails';
 import uuid from 'uuid';
-import { setUser, getUser, setFavorite } from './api/userApi';
+import { setUser, setFavorite, getUserFavorites } from './api/userApi';
 
 export const userId = uuid();
 
@@ -64,11 +64,12 @@ function App() {
       ...catData,
       sortedCatFacts
     });
+
     setShowSortByLastWord(!showSortByLastWord);
   }
 
   const showFavorites = async () => {
-    const { favorites } = await getUser(userId);
+    const favorites = await getUserFavorites(userId);
     setUserFavoriteCatFacts(favorites);
     setShowUserFavorites(true);
   }
@@ -124,8 +125,13 @@ function App() {
           className='sort-button'
           onClick={() => sortCatData()}
         >
-          sort by last word
-        </button> : null}
+          {!showSortByLastWord ? 'sort by last word' : 'unsort'}
+        </button> : <button
+          className='sort-button'
+          onClick={() => setShowUserFavorites(false)}
+        >
+          back
+        </button> }
         {hasFavorites ? <button
           className='sort-button'
           onClick={() => showFavorites()}
