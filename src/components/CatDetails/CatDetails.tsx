@@ -13,6 +13,7 @@ export interface CatDetailsComponentProps {
   pictureUrl: string;
   id: string;
   saveToFavorites: (hasFavorites: boolean, favorite: CatDetailProps) => void;
+  isFavorite: boolean;
 }
 
 export default function CatDetails(props: CatDetailsComponentProps) {
@@ -21,6 +22,7 @@ export default function CatDetails(props: CatDetailsComponentProps) {
     fact,
     saveToFavorites,
     id,
+    isFavorite
   } = props;
 
   const [showCatModal, setShowCatModal] = React.useState(false);
@@ -50,7 +52,7 @@ export default function CatDetails(props: CatDetailsComponentProps) {
         <div className='cat-fact' data-testid='cat-fact'>
           <div>{fact}</div>
         </div>
-        {showCatModal ? 
+        {showCatModal && !isFavorite ? 
           <button onClick={() => saveToFavorites(true, {fact, pictureUrl, id})}>
             save to favorites
           </button> 

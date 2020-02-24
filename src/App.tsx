@@ -5,8 +5,7 @@ import { zipWith, sortBy, isNil } from 'lodash';
 import CatDetails, { CatDetailProps } from './components/CatDetails/CatDetails';
 import uuid from 'uuid';
 import { setUser, setFavorite, getUserFavorites } from './api/userApi';
-
-export const userId = uuid();
+import { getLocalStorageValue, setLocalStorageValue } from './utils/localStorage';
 
 export interface PictureData {
   id: string;
@@ -16,45 +15,65 @@ export interface PictureData {
 
 export interface CatFacts {
   fact: string;
-  picture: PictureData
+  pictureUrl: string;
+  id: string;
 }
 
 export interface CatData {
   page: number;
   catFacts: CatFacts[];
   sortedCatFacts?: CatFacts[];
+  favorites: CatFacts[];
 }
+export let userId = '';
 
 function App() {
   const [catData, setCatData] = React.useState<CatData>({
     page: 0,
-    catFacts: []
+    catFacts: [],
+    favorites: []
   });
 
   const [showSortByLastWord, setShowSortByLastWord ] = React.useState(false);
   const [showUserFavorites, setShowUserFavorites] = React.useState(false);
   const [hasFavorites, setHasFavorites] = React.useState(false);
-  const [userFavoriteCatFacts, setUserFavoriteCatFacts] = React.useState([]);
 
   const getCatData = React.useCallback(async () => {
     const facts = await getCatFacts();
     const pictures = await getCatImages();
-    const catFactsArray = zipWith(facts.data, pictures, (fact: {fact: string}, picture: PictureData) => ({ fact: fact.fact.trim(), picture }));
-
+    const catFactsArray = zipWith(facts.data, pictures, (fact: {fact: string}, picture: PictureData) => ({ fact: fact.fact.trim(), pictureUrl: picture.url, id: picture.id }));
+    const favorites = await getUserFavorites(userId);
+    if (favorites.length) {
+      setHasFavorites(true);
+    }
     setCatData({
       page: 1,
-      catFacts: catFactsArray
-    })
+      catFacts: catFactsArray,
+      favorites: favorites
+    });
 
-    setUser(userId);
   }, []);
+
+
+  const getUser = async () => {
+    const persistedUserId = getLocalStorageValue('userId');
+    if (!isNil(persistedUserId)) {
+     userId = persistedUserId
+    } else {
+      const newUserId = uuid();
+      setLocalStorageValue('userId', newUserId);
+      setUser(newUserId);
+    }
+  }
   
   React.useEffect(() => {
+    getUser();
     getCatData();
   }, [getCatData]);
   
-  const sortCatData = () => {
-    const sortedCatFacts = sortBy(catData.catFacts, [(cat) => {
+  const sortCatData = (useFavorites: boolean) => {
+    const whichDataToSort = useFavorites ? catData.favorites : catData.catFacts
+    const sortedCatFacts = sortBy(whichDataToSort, [(cat) => {
       const catFactArrayOfWords = cat.fact.toLocaleLowerCase().split(' ');
       const catFactLastWord = catFactArrayOfWords[catFactArrayOfWords.length - 1];
       return catFactLastWord.replace(/[^\w\s]/gi, '');
@@ -68,79 +87,44 @@ function App() {
     setShowSortByLastWord(!showSortByLastWord);
   }
 
-  const showFavorites = async () => {
-    const favorites = await getUserFavorites(userId);
-    setUserFavoriteCatFacts(favorites);
-    setShowUserFavorites(true);
-  }
-
   const saveToFavorites = (hasFavorites: boolean, favorite: CatDetailProps) => {
     setFavorite(favorite)
     setHasFavorites(hasFavorites);
   }
 
-  const { catFacts, sortedCatFacts } = catData
-  const maybeSortedCatFacts = (showSortByLastWord && !isNil(sortedCatFacts)) ? sortedCatFacts : catFacts;
-
-  const displayedCatFacts = () => {
-    return (
-      <>
-        {maybeSortedCatFacts.map((data: CatFacts) => {
-          return (
-            <CatDetails 
-              key={data.picture.id}
-              fact={data.fact}
-              pictureUrl={data.picture.url}
-              id={data.picture.id}
-              saveToFavorites={saveToFavorites}
-            />
-          )
-        })}
-      </>
-    )
-  }
-
-  const displayUserFavorites = () => {
-    return (
-      <>
-        {userFavoriteCatFacts.map((favorite: CatDetailProps) => {
-          return (
-            <CatDetails 
-              key={favorite.id}
-              fact={favorite.fact}
-              pictureUrl={favorite.pictureUrl}
-              id={favorite.id}
-              saveToFavorites={saveToFavorites}
-            />
-          )
-        })}
-      </>
-    )
-  }
+  const { catFacts, sortedCatFacts, favorites } = catData
+  const favoritesOrRegular = showUserFavorites ? favorites : catFacts;
+  const maybeSortedCatFacts = (showSortByLastWord && !isNil(sortedCatFacts)) ? sortedCatFacts : favoritesOrRegular;
   
   return (
     <div className='App'>
       <div className='header-container'>
-        {!showUserFavorites ? <button
+        <button
           className='sort-button'
-          onClick={() => sortCatData()}
+          onClick={() => sortCatData(showUserFavorites ? true : false)}
         >
           {!showSortByLastWord ? 'sort by last word' : 'unsort'}
-        </button> : <button
-          className='sort-button'
-          onClick={() => setShowUserFavorites(false)}
-        >
-          back
-        </button> }
+        </button>
         {hasFavorites ? <button
           className='sort-button'
-          onClick={() => showFavorites()}
+          onClick={() => setShowUserFavorites(!showUserFavorites)}
         >
-          view favorites
+          {!showUserFavorites ? 'view favorites' : 'back'}
         </button> : null}
       </div>
       <div className='cat-fact-list' data-testid='cat-facts-list'>
-        {showUserFavorites ? displayUserFavorites() : displayedCatFacts()}
+      {maybeSortedCatFacts.map((data: CatFacts) => {
+          return (
+            <CatDetails 
+              key={data.id}
+              fact={data.fact}
+              pictureUrl={data.pictureUrl}
+              id={data.id}
+              saveToFavorites={saveToFavorites}
+              isFavorite={showUserFavorites ? true : false}
+            />
+          )
+        })}
       </div>
     </div>
   );

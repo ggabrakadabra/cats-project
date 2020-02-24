@@ -1,4 +1,63 @@
 {
-  "users": [],
-  "favorites": []
+  "users": [
+    {
+      "id": "736c1c3d-4461-4195-9544-5ed77e77ce08"
+    }
+  ],
+  "favorites": [
+    {
+      "fact": "In 1987 cats overtook dogs as the number one pet in America.",
+      "pictureUrl": "https://s3.us-west-2.amazonaws.com/cdn2.thecatapi.com/images/4k4.gif",
+      "id": "4k4",
+      "userId": "f2a83ff9-0ac1-434f-8c3e-4a9f87275887"
+    },
+    {
+      "fact": "Jaguars are the only big cats that don't roar.",
+      "pictureUrl": "https://25.media.tumblr.com/tumblr_lpetx6Bl2q1qmvo0go1_500.jpg",
+      "id": "53j",
+      "userId": "f2a83ff9-0ac1-434f-8c3e-4a9f87275887"
+    },
+    {
+      "fact": "Ancient Egyptian family members shaved their eyebrows in mourning when the family cat died.",
+      "pictureUrl": "https://24.media.tumblr.com/tumblr_m2s6wbfUNQ1qzex9io1_500.jpg",
+      "id": "q8",
+      "userId": "55b584bb-d70f-44f3-92f4-57f3a02ed2d5"
+    },
+    {
+      "fact": "Cats are subject to gum disease and to dental caries. They should have their teeth cleaned by the vet or the cat dentist once a year.",
+      "pictureUrl": "https://28.media.tumblr.com/hgxzejjaclaua9etU4cIZaMoo1_500.jpg",
+      "id": "2b0",
+      "userId": "55b584bb-d70f-44f3-92f4-57f3a02ed2d5"
+    },
+    {
+      "fact": "Cats lose almost as much fluid in the saliva while grooming themselves as they do through urination.",
+      "pictureUrl": "https://25.media.tumblr.com/tumblr_kp3dbikhW01qz9bf5o1_500.jpg",
+      "id": "29i",
+      "userId": "736c1c3d-4461-4195-9544-5ed77e77ce08"
+    },
+    {
+      "fact": "A cat has two vocal chords, and can make over 100 sounds.",
+      "pictureUrl": "https://24.media.tumblr.com/tumblr_m1adoczEI31qbe5pxo1_500.jpg",
+      "id": "9ah",
+      "userId": "736c1c3d-4461-4195-9544-5ed77e77ce08"
+    },
+    {
+      "fact": "All cats need taurine in their diet to avoid blindness. Cats must also have fat in their diet as they are unable to produce it on their own.",
+      "pictureUrl": "https://26.media.tumblr.com/tumblr_krwvziszMn1qa9hjso1_500.jpg",
+      "id": "g",
+      "userId": "736c1c3d-4461-4195-9544-5ed77e77ce08"
+    },
+    {
+      "fact": "A cat's normal temperature varies around 101 degrees Fahrenheit.",
+      "pictureUrl": "https://25.media.tumblr.com/tumblr_lx6p8o02qx1qd4q01o1_500.jpg",
+      "id": "3fh",
+      "userId": "736c1c3d-4461-4195-9544-5ed77e77ce08"
+    },
+    {
+      "fact": "The Maine Coone is the only native American long haired breed.",
+      "pictureUrl": "https://26.media.tumblr.com/tumblr_lwkjvbE38b1qbhms5o1_500.jpg",
+      "id": "1nv",
+      "userId": "736c1c3d-4461-4195-9544-5ed77e77ce08"
+    }
+  ]
 }
