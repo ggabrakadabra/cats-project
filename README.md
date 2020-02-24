@@ -14,12 +14,10 @@ Some of the following specs are more ambiguous in nature. Feel free to interpret
 - Allow users to view one photo and fact at a time
 
 ## json-server
-Need to have the json server package downloaded globally 
-`npm install -g json-server`
 There are 2 endpoints this projects uses, "users" and "favorites".
 
 ## Start Project
-first, run `yarn`
+First, run `yarn`
 `nf start` will run both `yarn start` and `json-server --watch db.json`
 project will go to `http://localhost:5000/`
 

@@ -1,36 +1,4 @@
 {
-  "users": [
-    {
-      "id": "bb197b9c-20e8-4d4f-920a-22e5b567cd60"
-    },
-    {
-      "id": "b1c617e4-a480-4153-80c7-2495054b2297"
-    }
-  ],
-  "favorites": [
-    {
-      "fact": "After humans, mountain lions have the largest range of any mammal in the Western Hemisphere.",
-      "pictureUrl": "https://24.media.tumblr.com/tumblr_m4667kGMmy1qejbiro1_500.jpg",
-      "id": "drf",
-      "userId": "cc36ef0e-ae22-4822-956a-04fb6b03c8c4"
-    },
-    {
-      "fact": "Unlike other cats, lions have a tuft of hair at the end of their tails.",
-      "pictureUrl": "https://25.media.tumblr.com/tumblr_m6d0l6duuT1qzrn1bo1_500.jpg",
-      "id": "MTU4NjcyMg",
-      "userId": "cc36ef0e-ae22-4822-956a-04fb6b03c8c4"
-    },
-    {
-      "fact": "Cats are the world's most popular pets, outnumbering dogs by as many as three to one",
-      "pictureUrl": "https://s3.us-west-2.amazonaws.com/cdn2.thecatapi.com/images/h6KdgA6MC.jpg",
-      "id": "h6KdgA6MC",
-      "userId": "cc36ef0e-ae22-4822-956a-04fb6b03c8c4"
-    },
-    {
-      "fact": "Mohammed loved cats and reportedly his favorite cat, Muezza, was a tabby. Legend says that tabby cats have an “M” for Mohammed on top of their heads because Mohammad would often rest his hand on the cat’s head.",
-      "pictureUrl": "https://s3.us-west-2.amazonaws.com/cdn2.thecatapi.com/images/1RutANpj-.jpg",
-      "id": "1RutANpj-",
-      "userId": "cc36ef0e-ae22-4822-956a-04fb6b03c8c4"
-    }
-  ]
+  "users": [],
+  "favorites": []
 }

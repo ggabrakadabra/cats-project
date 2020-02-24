@@ -39,7 +39,7 @@ function App() {
   const getCatData = React.useCallback(async () => {
     const facts = await getCatFacts();
     const pictures = await getCatImages();
-    const catFactsArray = zipWith(facts.data, pictures, (fact: {fact: string}, picture: PictureData) => ({ fact: fact.fact, picture }));
+    const catFactsArray = zipWith(facts.data, pictures, (fact: {fact: string}, picture: PictureData) => ({ fact: fact.fact.trim(), picture }));
 
     setCatData({
       page: 1,
