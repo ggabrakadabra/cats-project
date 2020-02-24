@@ -22,11 +22,11 @@ First, run `yarn`
 project will go to `http://localhost:5000/`
 
 ## User Favorites
-Since the unique identifier for the user is set on page load, the previous user favorites will not be accessible.
-This is because without having some kind of authentication, there is no simple way to identify the user so that their data can persist.
+The unique user identifier for each user is set on page load unless there is already a userId value in local storage. This way, a user can come back and view their favorites. 
 
 ## What else I would like to add?
 - Test Coverage! Test coverage is important and with React Testing Library, adding integration tests is much easier.
+- The ability to remove favorited cat facts.
 - The ability to view previous and next photos in the Modal view.
 - Pagination. Ideally, if the user keeps scrolling down the page, I would show a loading spinner while fetching a new page of cat data. Once the data is fetched, append the new data to the already visible list. 
 
