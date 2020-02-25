@@ -1,18 +1,19 @@
 import React from 'react';
 import './CatDetails.scss';
 import ReactModal from 'react-modal';
+import { CatFacts } from '../../App';
 
-export interface CatDetailProps {
-  fact: string;
-  pictureUrl: string;
-  id: string;
-}
+// export interface CatDetailProps {
+//   fact: string;
+//   pictureUrl: string;
+//   id: string;
+// }
 
 export interface CatDetailsComponentProps {
   fact: string;
   pictureUrl: string;
   id: string;
-  saveToFavorites: (hasFavorites: boolean, favorite: CatDetailProps) => void;
+  saveToFavorites: (hasFavorites: boolean, favorite: CatFacts, catFactId: string) => void;
   isFavorite: boolean;
 }
 
@@ -53,7 +54,7 @@ export default function CatDetails(props: CatDetailsComponentProps) {
           <div>{fact}</div>
         </div>
         {showCatModal && !isFavorite ? 
-          <button onClick={() => saveToFavorites(true, {fact, pictureUrl, id})}>
+          <button onClick={() => saveToFavorites(true, {fact, pictureUrl, id}, id)}>
             save to favorites
           </button> 
           : null}

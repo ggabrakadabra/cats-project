@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 import { getCatFacts, getCatImages } from './api/catApi';
 import { zipWith, sortBy, isNil } from 'lodash';
-import CatDetails, { CatDetailProps } from './components/CatDetails/CatDetails';
+import CatDetails from './components/CatDetails/CatDetails';
 import uuid from 'uuid';
 import { setUser, setFavorite, getUserFavorites } from './api/userApi';
 import { getLocalStorageValue, setLocalStorageValue } from './utils/localStorage';
@@ -87,14 +87,23 @@ function App() {
     setShowSortByLastWord(!showSortByLastWord);
   }
 
-  const saveToFavorites = (hasFavorites: boolean, favorite: CatDetailProps) => {
-    setFavorite(favorite)
-    setHasFavorites(hasFavorites);
+  const saveToFavorites = (hasFavorites: boolean, favorite: CatFacts, catFactId: string) => {
+    const favoriteExists = catData.favorites.some(favorite => favorite.id === catFactId)
+    console.log(catData.favorites, catFactId)
+    console.log(favoriteExists)
+    if (favoriteExists) {
+      return;
+    } else {
+      const newFavorites = catData.favorites.concat(favorite);
+      setFavorite(favorite)
+      setCatData({...catData, favorites: newFavorites })
+      setHasFavorites(hasFavorites);
+    }
   }
 
   const { catFacts, sortedCatFacts, favorites } = catData
   const favoritesOrRegular = showUserFavorites ? favorites : catFacts;
-  const maybeSortedCatFacts = (showSortByLastWord && !isNil(sortedCatFacts)) ? sortedCatFacts : favoritesOrRegular;
+  const maybeSortedCatFacts = !isNil(sortedCatFacts) ? sortedCatFacts : favoritesOrRegular;
   
   return (
     <div className='App'>

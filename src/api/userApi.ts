@@ -1,5 +1,4 @@
-import { userId } from "../App";
-import { CatDetailProps } from "../components/CatDetails/CatDetails";
+import { userId, CatFacts } from "../App";
 
 export async function setUser(userId: string) {
   await fetch(`http://localhost:3004/users`, {
@@ -11,7 +10,7 @@ export async function setUser(userId: string) {
   });
 }
 
-export async function setFavorite(props: CatDetailProps) {
+export async function setFavorite(props: CatFacts) {
   const body = {
     ...props,
     userId
