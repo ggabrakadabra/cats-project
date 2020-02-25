@@ -58,6 +58,24 @@
       "pictureUrl": "https://26.media.tumblr.com/tumblr_lwkjvbE38b1qbhms5o1_500.jpg",
       "id": "1nv",
       "userId": "736c1c3d-4461-4195-9544-5ed77e77ce08"
+    },
+    {
+      "fact": "The leopard is the most widespread of all big cats.",
+      "pictureUrl": "https://24.media.tumblr.com/tumblr_m4g7z0X8fq1qhwmnpo1_500.jpg",
+      "id": "d8p",
+      "userId": "736c1c3d-4461-4195-9544-5ed77e77ce08"
+    },
+    {
+      "fact": "Tabby cats are thought to get their name from Attab, a district in Baghdad, now the capital of Iraq.",
+      "pictureUrl": "https://28.media.tumblr.com/tumblr_m1rfozW8AK1qzlzrxo1_500.png",
+      "id": "1d0",
+      "userId": "736c1c3d-4461-4195-9544-5ed77e77ce08"
+    },
+    {
+      "fact": "The world’s rarest coffee, Kopi Luwak, comes from Indonesia where a wildcat known as the luwak lives. The cat eats coffee berries and the coffee beans inside pass through the stomach. The beans are harvested from the cat’s dung heaps and then cleaned and roasted. Kopi Luwak sells for about $500 for a 450 g (1 lb) bag.",
+      "pictureUrl": "https://s3.us-west-2.amazonaws.com/cdn2.thecatapi.com/images/18n.gif",
+      "id": "18n",
+      "userId": "736c1c3d-4461-4195-9544-5ed77e77ce08"
     }
   ]
 }
